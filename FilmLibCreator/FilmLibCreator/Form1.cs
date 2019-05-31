@@ -56,7 +56,7 @@ namespace FilmLibCreator
                     File.Copy(Directory.GetCurrentDirectory() + "\\aviTemplate.avi", strTmp + $"\\PREVIEWS\\Preview_{i}_A.avi");        //Preview A
                     File.Copy(Directory.GetCurrentDirectory() + "\\aviTemplate.avi", strTmp + $"\\PREVIEWS\\Preview_{i}_B.avi");        //Preview B
                     File.Copy(Directory.GetCurrentDirectory() + "\\aviTemplate.avi", strTmp + $"\\PREVIEWS\\Preview_{i}_Render.avi");   //Preview Render
-                    Directory.CreateDirectory(strTmp + "\\ ANIM");
+                    Directory.CreateDirectory(strTmp + "\\ANIM");
                     File.Copy(Directory.GetCurrentDirectory() + "\\maxTemplate.max", strTmp + $"\\ANIM\\{i}_ANIM_01.max");
                 }
                 Directory.CreateDirectory(directorybase + "\\VEGAS");
@@ -72,7 +72,7 @@ namespace FilmLibCreator
                 }
                 Directory.CreateDirectory(directorybase + "\\SCAN");
                 Directory.CreateDirectory(directorybase + "\\FORG");
-
+                return;
             }
         }
 
@@ -83,6 +83,7 @@ namespace FilmLibCreator
             {
                 Characters.Add(tbNewCharacter.Text);
                 lvCharacters.Items.Add(new ListViewItem(tbNewCharacter.Text));
+                tbNewCharacter.Text = "";
             }
         }
 
@@ -93,6 +94,7 @@ namespace FilmLibCreator
             {
                 Props.Add(tbNewProp.Text);
                 lvProps.Items.Add(new ListViewItem(tbNewProp.Text));
+                tbNewProp.Text = "";
             }
         }
 
