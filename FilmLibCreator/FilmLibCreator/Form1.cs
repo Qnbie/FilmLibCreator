@@ -25,6 +25,11 @@ namespace FilmLibCreator
         private void BCreate_Click(object sender, EventArgs e)
         {
             string strTmp;
+            string placeHolder = "";
+            for(int i = 0; i < nSceneNumber.ToString().Length; i++)
+            {
+                placeHolder += "0";
+            }
             if (tbFilmTitle.Text == "" || tbPath.Text == "")
             {
                 errorEmpty();
@@ -51,13 +56,13 @@ namespace FilmLibCreator
                 Directory.CreateDirectory(directorybase + "\\JELENETEK");
                 for (int i = 1; i <= nSceneNumber.Value; i++)
                 {
-                    strTmp = directorybase + "\\JELENETEK" + "\\" + i.ToString("00");
+                    strTmp = directorybase + "\\JELENETEK" + "\\" + i.ToString(placeHolder);
                     Directory.CreateDirectory(strTmp + "\\PREVIEWS");
-                    File.Copy(Directory.GetCurrentDirectory() + "\\aviTemplate.avi", strTmp + $"\\PREVIEWS\\Preview_{i}_A.avi");        //Preview A
-                    File.Copy(Directory.GetCurrentDirectory() + "\\aviTemplate.avi", strTmp + $"\\PREVIEWS\\Preview_{i}_B.avi");        //Preview B
-                    File.Copy(Directory.GetCurrentDirectory() + "\\aviTemplate.avi", strTmp + $"\\PREVIEWS\\Preview_{i}_Render.avi");   //Preview Render
+                    File.Copy(Directory.GetCurrentDirectory() + "\\aviTemplate.avi", strTmp + $"\\PREVIEWS\\Preview_{i.ToString(placeHolder)}_A.avi");        //Preview A
+                    File.Copy(Directory.GetCurrentDirectory() + "\\aviTemplate.avi", strTmp + $"\\PREVIEWS\\Preview_{i.ToString(placeHolder)}_B.avi");        //Preview B
+                    File.Copy(Directory.GetCurrentDirectory() + "\\aviTemplate.avi", strTmp + $"\\PREVIEWS\\Preview_{i.ToString(placeHolder)}_Render.avi");   //Preview Render
                     Directory.CreateDirectory(strTmp + "\\ANIM");
-                    File.Copy(Directory.GetCurrentDirectory() + "\\maxTemplate.max", strTmp + $"\\ANIM\\{i}_ANIM_01.max");
+                    File.Copy(Directory.GetCurrentDirectory() + "\\maxTemplate.max", strTmp + $"\\ANIM\\{i.ToString(placeHolder)}_ANIM_01.max");
                 }
                 Directory.CreateDirectory(directorybase + "\\VEGAS");
                 Directory.CreateDirectory(directorybase + "\\BG");
