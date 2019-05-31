@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28922.388
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilmLibCreator", "FilmLibCreator\FilmLibCreator.csproj", "{06B522AC-0909-4D64-9D6C-224E221A3F73}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06B522AC-0909-4D64-9D6C-224E221A3F73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06B522AC-0909-4D64-9D6C-224E221A3F73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06B522AC-0909-4D64-9D6C-224E221A3F73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06B522AC-0909-4D64-9D6C-224E221A3F73}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {35A8749D-FCB2-4DAF-92AB-EA9F883DE60D}
+	EndGlobalSection
+EndGlobal
