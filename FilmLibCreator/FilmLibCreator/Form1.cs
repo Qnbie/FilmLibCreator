@@ -17,10 +17,7 @@ namespace FilmLibCreator
 
         private List<string> Characters = new List<string>();
         private List<string> Props = new List<string>();
-        private List<string> SetUp = new List<string>();
- 
-
-
+        
         public Form1()
         {
             InitializeComponent();
@@ -44,6 +41,7 @@ namespace FilmLibCreator
                 string directorybase = tbPath.Text + "\\" + tbFilmTitle.Text;
                 /******CHARACTER******/
                 Directory.CreateDirectory(directorybase + "\\CHR");
+                Directory.CreateDirectory(directorybase + "\\CHR\\CELLPANEL");
                 for (int i = 0; i < Characters.Count(); i++)
                 {
                     //Characters
@@ -58,19 +56,25 @@ namespace FilmLibCreator
                     File.Copy(Directory.GetCurrentDirectory() + "\\maxTemplate.max", strTmp + $"\\HAIR\\{Characters[i]}_HAIR_01.max");
                     Directory.CreateDirectory(strTmp + "\\RENDER");
                     File.Copy(Directory.GetCurrentDirectory() + "\\maxTemplate.max", strTmp + $"\\RENDER\\{Characters[i]}_RENDER_01.max");
+                    Directory.CreateDirectory(strTmp + "\\LATVANY");
+                    Directory.CreateDirectory(strTmp + "\\ANIM");
                 }
                 /******VEGAS******/
                 Directory.CreateDirectory(directorybase + "\\VEGAS");
                 Directory.CreateDirectory(directorybase + "\\VEGAS\\PREVIEW_A");
                 Directory.CreateDirectory(directorybase + "\\VEGAS\\PREVIEW_B");
-                Directory.CreateDirectory(directorybase + "\\VEGAS\\PREVIEW_Render");
+                Directory.CreateDirectory(directorybase + "\\VEGAS\\RENDER");
+                Directory.CreateDirectory(directorybase + "\\VEGAS\\ANIMATIK");
                 /******JELENETEK******/
                 Directory.CreateDirectory(directorybase + "\\JELENETEK");
+                Directory.CreateDirectory(directorybase + "\\JELENETEK\\MATYIsHITS");
                 for (int i = 1; i <= nSceneNumber.Value; i++)
                 {
                     strTmp = directorybase + "\\JELENETEK" + "\\" + i.ToString(placeHolder);
                     //Previews
-                    Directory.CreateDirectory(strTmp + "\\PREVIEWS");
+                    Directory.CreateDirectory(strTmp + "\\RENDER");
+                    Directory.CreateDirectory(strTmp + "\\SIM");
+                    Directory.CreateDirectory(strTmp + "\\PC");
                     //Anim
                     Directory.CreateDirectory(strTmp + "\\ANIM");
                     File.Copy(Directory.GetCurrentDirectory() + "\\maxTemplate.max", strTmp + $"\\ANIM\\{i.ToString(placeHolder)}_ANIM_01.max");
@@ -78,7 +82,11 @@ namespace FilmLibCreator
                 }
                 /******BG******/
                 Directory.CreateDirectory(directorybase + "\\BG");
-                /******PROPS******/
+                Directory.CreateDirectory(directorybase + "\\BG\\EMESE");
+                Directory.CreateDirectory(directorybase + "\\BG\\MATYI");
+                Directory.CreateDirectory(directorybase + "\\BG\\GIGI");
+                Directory.CreateDirectory(directorybase + "\\BG\\SCAN");
+                /******MODELS******/
                 Directory.CreateDirectory(directorybase + "\\PROPS");
                 for (int i = 0; i < Props.Count(); i++)
                 {
