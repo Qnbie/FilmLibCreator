@@ -41,7 +41,7 @@ namespace FilmLibCreator
                 string directorybase = tbPath.Text + "\\" + tbFilmTitle.Text;
                 /******CHARACTER******/
                 Directory.CreateDirectory(directorybase + "\\CHR");
-                Directory.CreateDirectory(directorybase + "\\CHR\\CELLPANEL");
+                Directory.CreateDirectory(directorybase + "\\CHR\\SELPANEL");
                 for (int i = 0; i < Characters.Count(); i++)
                 {
                     //Characters
@@ -58,6 +58,7 @@ namespace FilmLibCreator
                     File.Copy(Directory.GetCurrentDirectory() + "\\maxTemplate.max", strTmp + $"\\RENDER\\{Characters[i]}_RENDER_01.max");
                     Directory.CreateDirectory(strTmp + "\\LATVANY");
                     Directory.CreateDirectory(strTmp + "\\ANIM");
+                    Directory.CreateDirectory(strTmp + "\\MARI");
                 }
                 /******VEGAS******/
                 Directory.CreateDirectory(directorybase + "\\VEGAS");
@@ -91,11 +92,12 @@ namespace FilmLibCreator
                 for (int i = 0; i < Props.Count(); i++)
                 {
                     //props
-                    strTmp = directorybase + "\\PROPS" + "\\" + Props[i];
+                    strTmp = directorybase + "\\MODELS" + "\\" + Props[i];
                     Directory.CreateDirectory(strTmp);
                     Directory.CreateDirectory(strTmp + "\\MODEL");
                     File.Copy(Directory.GetCurrentDirectory() + "\\maxTemplate.max", strTmp + $"\\MODEL\\{Props[i]}_MODEL_01.max");
                     Directory.CreateDirectory(strTmp + "\\TEXT");
+                    Directory.CreateDirectory(strTmp + "\\MARI");
                 }
                 /******SCAN******/
                 Directory.CreateDirectory(directorybase + "\\SCAN");
