@@ -47,15 +47,16 @@
             this.label7 = new System.Windows.Forms.Label();
             this.bDeleteCharacter = new System.Windows.Forms.Button();
             this.bDeleteProp = new System.Windows.Forms.Button();
+            this.bBrowser = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nSceneNumber)).BeginInit();
             this.SuspendLayout();
             // 
             // tbFilmTitle
             // 
-            this.tbFilmTitle.Location = new System.Drawing.Point(146, 6);
+            this.tbFilmTitle.Location = new System.Drawing.Point(89, 6);
             this.tbFilmTitle.Name = "tbFilmTitle";
-            this.tbFilmTitle.Size = new System.Drawing.Size(120, 20);
-            this.tbFilmTitle.TabIndex = 0;
+            this.tbFilmTitle.Size = new System.Drawing.Size(163, 20);
+            this.tbFilmTitle.TabIndex = 1;
             // 
             // label1
             // 
@@ -63,13 +64,13 @@
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 13);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Film Title";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 41);
+            this.label2.Location = new System.Drawing.Point(321, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 13);
             this.label2.TabIndex = 2;
@@ -77,17 +78,17 @@
             // 
             // nSceneNumber
             // 
-            this.nSceneNumber.Location = new System.Drawing.Point(146, 39);
+            this.nSceneNumber.Location = new System.Drawing.Point(455, 7);
             this.nSceneNumber.Name = "nSceneNumber";
             this.nSceneNumber.Size = new System.Drawing.Size(120, 20);
             this.nSceneNumber.TabIndex = 3;
             // 
             // bCreate
             // 
-            this.bCreate.Location = new System.Drawing.Point(221, 286);
+            this.bCreate.Location = new System.Drawing.Point(18, 340);
             this.bCreate.Name = "bCreate";
-            this.bCreate.Size = new System.Drawing.Size(75, 23);
-            this.bCreate.TabIndex = 4;
+            this.bCreate.Size = new System.Drawing.Size(557, 83);
+            this.bCreate.TabIndex = 19;
             this.bCreate.Text = "Create";
             this.bCreate.UseVisualStyleBackColor = true;
             this.bCreate.Click += new System.EventHandler(this.BCreate_Click);
@@ -95,120 +96,120 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 77);
+            this.label3.Location = new System.Drawing.Point(15, 50);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 13);
-            this.label3.TabIndex = 5;
+            this.label3.TabIndex = 4;
             this.label3.Text = "Path";
             // 
             // tbPath
             // 
-            this.tbPath.Location = new System.Drawing.Point(146, 77);
+            this.tbPath.Location = new System.Drawing.Point(89, 43);
             this.tbPath.Name = "tbPath";
-            this.tbPath.Size = new System.Drawing.Size(120, 20);
-            this.tbPath.TabIndex = 6;
+            this.tbPath.Size = new System.Drawing.Size(486, 20);
+            this.tbPath.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(321, 8);
+            this.label4.Location = new System.Drawing.Point(12, 191);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 13);
-            this.label4.TabIndex = 7;
+            this.label4.TabIndex = 10;
             this.label4.Text = "Characters:";
             // 
             // lvCharacters
             // 
-            this.lvCharacters.Location = new System.Drawing.Point(324, 25);
+            this.lvCharacters.Location = new System.Drawing.Point(15, 208);
             this.lvCharacters.Name = "lvCharacters";
-            this.lvCharacters.Size = new System.Drawing.Size(146, 72);
-            this.lvCharacters.TabIndex = 8;
+            this.lvCharacters.Size = new System.Drawing.Size(251, 72);
+            this.lvCharacters.TabIndex = 11;
             this.lvCharacters.UseCompatibleStateImageBehavior = false;
             this.lvCharacters.View = System.Windows.Forms.View.List;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 128);
+            this.label5.Location = new System.Drawing.Point(12, 145);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 13);
-            this.label5.TabIndex = 9;
+            this.label5.TabIndex = 7;
             this.label5.Text = "New Character";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 216);
+            this.label6.Location = new System.Drawing.Point(321, 141);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 13);
-            this.label6.TabIndex = 10;
+            this.label6.TabIndex = 13;
             this.label6.Text = "New Prop";
             // 
             // tbNewCharacter
             // 
-            this.tbNewCharacter.Location = new System.Drawing.Point(146, 120);
+            this.tbNewCharacter.Location = new System.Drawing.Point(146, 138);
             this.tbNewCharacter.Name = "tbNewCharacter";
             this.tbNewCharacter.Size = new System.Drawing.Size(120, 20);
-            this.tbNewCharacter.TabIndex = 11;
+            this.tbNewCharacter.TabIndex = 8;
             // 
             // tbNewProp
             // 
-            this.tbNewProp.Location = new System.Drawing.Point(146, 213);
+            this.tbNewProp.Location = new System.Drawing.Point(455, 138);
             this.tbNewProp.Name = "tbNewProp";
             this.tbNewProp.Size = new System.Drawing.Size(120, 20);
-            this.tbNewProp.TabIndex = 12;
+            this.tbNewProp.TabIndex = 14;
             // 
             // bAddCharacter
             // 
-            this.bAddCharacter.Location = new System.Drawing.Point(99, 146);
+            this.bAddCharacter.Location = new System.Drawing.Point(99, 164);
             this.bAddCharacter.Name = "bAddCharacter";
             this.bAddCharacter.Size = new System.Drawing.Size(110, 23);
-            this.bAddCharacter.TabIndex = 13;
+            this.bAddCharacter.TabIndex = 9;
             this.bAddCharacter.Text = "Add Character";
             this.bAddCharacter.UseVisualStyleBackColor = true;
             this.bAddCharacter.Click += new System.EventHandler(this.BAddCharacter_Click);
             // 
             // bAddProp
             // 
-            this.bAddProp.Location = new System.Drawing.Point(99, 239);
+            this.bAddProp.Location = new System.Drawing.Point(418, 164);
             this.bAddProp.Name = "bAddProp";
             this.bAddProp.Size = new System.Drawing.Size(75, 23);
-            this.bAddProp.TabIndex = 14;
+            this.bAddProp.TabIndex = 15;
             this.bAddProp.Text = "Add Prop";
             this.bAddProp.UseVisualStyleBackColor = true;
             this.bAddProp.Click += new System.EventHandler(this.BAddProp_Click);
             // 
             // lvProps
             // 
-            this.lvProps.Location = new System.Drawing.Point(324, 161);
+            this.lvProps.Location = new System.Drawing.Point(324, 208);
             this.lvProps.Name = "lvProps";
-            this.lvProps.Size = new System.Drawing.Size(146, 72);
-            this.lvProps.TabIndex = 16;
+            this.lvProps.Size = new System.Drawing.Size(251, 72);
+            this.lvProps.TabIndex = 17;
             this.lvProps.UseCompatibleStateImageBehavior = false;
             this.lvProps.View = System.Windows.Forms.View.List;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(321, 145);
+            this.label7.Location = new System.Drawing.Point(321, 192);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(37, 13);
-            this.label7.TabIndex = 15;
+            this.label7.TabIndex = 16;
             this.label7.Text = "Props:";
             // 
             // bDeleteCharacter
             // 
-            this.bDeleteCharacter.Location = new System.Drawing.Point(324, 104);
+            this.bDeleteCharacter.Location = new System.Drawing.Point(15, 287);
             this.bDeleteCharacter.Name = "bDeleteCharacter";
-            this.bDeleteCharacter.Size = new System.Drawing.Size(99, 23);
-            this.bDeleteCharacter.TabIndex = 17;
+            this.bDeleteCharacter.Size = new System.Drawing.Size(204, 23);
+            this.bDeleteCharacter.TabIndex = 12;
             this.bDeleteCharacter.Text = "Delete Character";
             this.bDeleteCharacter.UseVisualStyleBackColor = true;
             this.bDeleteCharacter.Click += new System.EventHandler(this.BDeleteCharacter_Click);
             // 
             // bDeleteProp
             // 
-            this.bDeleteProp.Location = new System.Drawing.Point(324, 239);
+            this.bDeleteProp.Location = new System.Drawing.Point(324, 286);
             this.bDeleteProp.Name = "bDeleteProp";
             this.bDeleteProp.Size = new System.Drawing.Size(75, 23);
             this.bDeleteProp.TabIndex = 18;
@@ -216,11 +217,22 @@
             this.bDeleteProp.UseVisualStyleBackColor = true;
             this.bDeleteProp.Click += new System.EventHandler(this.BDeleteProp_Click);
             // 
+            // bBrowser
+            // 
+            this.bBrowser.Location = new System.Drawing.Point(18, 78);
+            this.bBrowser.Name = "bBrowser";
+            this.bBrowser.Size = new System.Drawing.Size(557, 27);
+            this.bBrowser.TabIndex = 6;
+            this.bBrowser.Text = "Browser";
+            this.bBrowser.UseVisualStyleBackColor = true;
+            this.bBrowser.Click += new System.EventHandler(this.BBrowser_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(518, 321);
+            this.ClientSize = new System.Drawing.Size(597, 463);
+            this.Controls.Add(this.bBrowser);
             this.Controls.Add(this.bDeleteProp);
             this.Controls.Add(this.bDeleteCharacter);
             this.Controls.Add(this.lvProps);
@@ -269,6 +281,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button bDeleteCharacter;
         private System.Windows.Forms.Button bDeleteProp;
+        private System.Windows.Forms.Button bBrowser;
     }
 }
 

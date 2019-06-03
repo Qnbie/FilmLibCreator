@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -16,6 +17,9 @@ namespace FilmLibCreator
 
         private List<string> Characters = new List<string>();
         private List<string> Props = new List<string>();
+        private List<string> SetUp = new List<string>();
+ 
+
 
         public Form1()
         {
@@ -26,7 +30,7 @@ namespace FilmLibCreator
         {
             string strTmp;
             string placeHolder = "";
-            for(int i = 0; i < nSceneNumber.ToString().Length; i++)
+            for(int i = 0; i < nSceneNumber.Value.ToString().Length; i++)
             {
                 placeHolder += "0";
             }
@@ -36,10 +40,13 @@ namespace FilmLibCreator
             }
             else
             {
+                // Base Directory of the film
                 string directorybase = tbPath.Text + "\\" + tbFilmTitle.Text;
+                /******CHARACTER******/
                 Directory.CreateDirectory(directorybase + "\\CHR");
                 for (int i = 0; i < Characters.Count(); i++)
                 {
+                    //Characters
                     strTmp = directorybase + "\\CHR" + "\\" + Characters[i];
                     Directory.CreateDirectory(strTmp);
                     Directory.CreateDirectory(strTmp + "\\MODEL");
@@ -52,31 +59,41 @@ namespace FilmLibCreator
                     Directory.CreateDirectory(strTmp + "\\RENDER");
                     File.Copy(Directory.GetCurrentDirectory() + "\\maxTemplate.max", strTmp + $"\\RENDER\\{Characters[i]}_RENDER_01.max");
                 }
-
+                /******VEGAS******/
+                Directory.CreateDirectory(directorybase + "\\VEGAS");
+                Directory.CreateDirectory(directorybase + "\\VEGAS\\PREVIEW_A");
+                Directory.CreateDirectory(directorybase + "\\VEGAS\\PREVIEW_B");
+                Directory.CreateDirectory(directorybase + "\\VEGAS\\PREVIEW_Render");
+                /******JELENETEK******/
                 Directory.CreateDirectory(directorybase + "\\JELENETEK");
                 for (int i = 1; i <= nSceneNumber.Value; i++)
                 {
                     strTmp = directorybase + "\\JELENETEK" + "\\" + i.ToString(placeHolder);
+                    //Previews
                     Directory.CreateDirectory(strTmp + "\\PREVIEWS");
-                    File.Copy(Directory.GetCurrentDirectory() + "\\aviTemplate.avi", strTmp + $"\\PREVIEWS\\Preview_{i.ToString(placeHolder)}_A.avi");        //Preview A
-                    File.Copy(Directory.GetCurrentDirectory() + "\\aviTemplate.avi", strTmp + $"\\PREVIEWS\\Preview_{i.ToString(placeHolder)}_B.avi");        //Preview B
-                    File.Copy(Directory.GetCurrentDirectory() + "\\aviTemplate.avi", strTmp + $"\\PREVIEWS\\Preview_{i.ToString(placeHolder)}_Render.avi");   //Preview Render
+                    //Anim
                     Directory.CreateDirectory(strTmp + "\\ANIM");
                     File.Copy(Directory.GetCurrentDirectory() + "\\maxTemplate.max", strTmp + $"\\ANIM\\{i.ToString(placeHolder)}_ANIM_01.max");
+                    
                 }
-                Directory.CreateDirectory(directorybase + "\\VEGAS");
+                /******BG******/
                 Directory.CreateDirectory(directorybase + "\\BG");
+                /******PROPS******/
                 Directory.CreateDirectory(directorybase + "\\PROPS");
                 for (int i = 0; i < Props.Count(); i++)
                 {
+                    //props
                     strTmp = directorybase + "\\PROPS" + "\\" + Props[i];
                     Directory.CreateDirectory(strTmp);
                     Directory.CreateDirectory(strTmp + "\\MODEL");
                     File.Copy(Directory.GetCurrentDirectory() + "\\maxTemplate.max", strTmp + $"\\MODEL\\{Props[i]}_MODEL_01.max");
                     Directory.CreateDirectory(strTmp + "\\TEXT");
                 }
+                /******SCAN******/
                 Directory.CreateDirectory(directorybase + "\\SCAN");
+                /******FORG******/
                 Directory.CreateDirectory(directorybase + "\\FORG");
+
                 return;
             }
         }
@@ -131,6 +148,16 @@ namespace FilmLibCreator
         private void errorSelect()
         {
             MessageBox.Show($"Please select an item first!");
+        }
+
+        private void BBrowser_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog(); ;
+            DialogResult result = folderBrowserDialog1.ShowDialog();
+            if(result.ToString() == "OK")
+            {
+                tbPath.Text = folderBrowserDialog1.SelectedPath;
+            }
         }
     }
 }
