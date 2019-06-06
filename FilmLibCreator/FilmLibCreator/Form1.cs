@@ -45,17 +45,17 @@ namespace FilmLibCreator
                 for (int i = 0; i < Characters.Count(); i++)
                 {
                     //Characters
-                    strTmp = directorybase + "\\CHR" + "\\" + Characters[i];
+                    strTmp = directorybase + "\\CHR" + "\\" + Characters[i].ToUpper();
                     Directory.CreateDirectory(strTmp);
                     Directory.CreateDirectory(strTmp + "\\MODEL");
-                    File.Copy(Directory.GetCurrentDirectory() + "\\maxTemplate.max", strTmp + $"\\MODEL\\{Characters[i]}_MODEL_01.max");
+                    File.Copy(Directory.GetCurrentDirectory() + "\\maxTemplate.max", strTmp + $"\\MODEL\\{Characters[i].ToUpper()}_MODEL_01.max");
                     Directory.CreateDirectory(strTmp + "\\RIG");
-                    File.Copy(Directory.GetCurrentDirectory() + "\\maxTemplate.max", strTmp + $"\\RIG\\{Characters[i]}_RIG_01.max");
+                    File.Copy(Directory.GetCurrentDirectory() + "\\maxTemplate.max", strTmp + $"\\RIG\\{Characters[i].ToUpper()}_RIG_01.max");
                     Directory.CreateDirectory(strTmp + "\\TEXT");
                     Directory.CreateDirectory(strTmp + "\\HAIR");
-                    File.Copy(Directory.GetCurrentDirectory() + "\\maxTemplate.max", strTmp + $"\\HAIR\\{Characters[i]}_HAIR_01.max");
+                    File.Copy(Directory.GetCurrentDirectory() + "\\maxTemplate.max", strTmp + $"\\HAIR\\{Characters[i].ToUpper()}_HAIR_01.max");
                     Directory.CreateDirectory(strTmp + "\\RENDER");
-                    File.Copy(Directory.GetCurrentDirectory() + "\\maxTemplate.max", strTmp + $"\\RENDER\\{Characters[i]}_RENDER_01.max");
+                    File.Copy(Directory.GetCurrentDirectory() + "\\maxTemplate.max", strTmp + $"\\RENDER\\{Characters[i].ToUpper()}_RENDER_01.max");
                     Directory.CreateDirectory(strTmp + "\\LATVANY");
                     Directory.CreateDirectory(strTmp + "\\ANIM");
                     Directory.CreateDirectory(strTmp + "\\MARI");
