@@ -89,14 +89,14 @@ namespace FilmLibCreator
                 Directory.CreateDirectory(directorybase + "\\BG\\GIGI");
                 Directory.CreateDirectory(directorybase + "\\BG\\SCAN");
                 /******MODELS******/
-                Directory.CreateDirectory(directorybase + "\\PROPS");
+                Directory.CreateDirectory(directorybase + "\\MODELS");
                 for (int i = 0; i < Props.Count(); i++)
                 {
-                    //props
-                    strTmp = directorybase + "\\MODELS" + "\\" + Props[i];
+                    //models
+                    strTmp = directorybase + "\\MODELS" + "\\" + Props[i].ToUpper();
                     Directory.CreateDirectory(strTmp);
                     Directory.CreateDirectory(strTmp + "\\MODEL");
-                    File.Copy(Directory.GetCurrentDirectory() + "\\maxTemplate.max", strTmp + $"\\MODEL\\{Props[i]}_MODEL_01.max");
+                    File.Copy(Directory.GetCurrentDirectory() + "\\maxTemplate.max", strTmp + $"\\MODEL\\{Props[i].ToUpper()}_MODEL_01.max");
                     Directory.CreateDirectory(strTmp + "\\TEXT");
                     Directory.CreateDirectory(strTmp + "\\MARI");
                 }
