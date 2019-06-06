@@ -72,14 +72,15 @@ namespace FilmLibCreator
                 for (int i = 1; i <= nSceneNumber.Value; i++)
                 {
                     strTmp = directorybase + "\\JELENETEK" + "\\" + i.ToString(placeHolder);
-                    //Previews
+                    //Directorys
                     Directory.CreateDirectory(strTmp + "\\RENDER");
                     Directory.CreateDirectory(strTmp + "\\SIM");
                     Directory.CreateDirectory(strTmp + "\\PC");
-                    //Anim
+                    Directory.CreateDirectory(strTmp + "\\HANG");
                     Directory.CreateDirectory(strTmp + "\\ANIM");
+                    //Template Files
                     File.Copy(Directory.GetCurrentDirectory() + "\\maxTemplate.max", strTmp + $"\\ANIM\\{i.ToString(placeHolder)}_ANIM_01.max");
-                    
+                    File.Copy(Directory.GetCurrentDirectory() + "\\maxTemplate.max", strTmp + $"\\RENDER\\{i.ToString(placeHolder)}_RENDER_01.max");
                 }
                 /******BG******/
                 Directory.CreateDirectory(directorybase + "\\BG");
