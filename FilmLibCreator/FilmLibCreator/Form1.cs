@@ -39,6 +39,10 @@ namespace FilmLibCreator
             {
                 // Base Directory of the film
                 string directorybase = tbPath.Text + "\\" + tbFilmTitle.Text;
+                /******DEVS******/
+                Directory.CreateDirectory(directorybase + "\\DEVS");
+                File.Copy(Directory.GetCurrentDirectory() + "\\maxTemplate.max", directorybase + "\\DEVS\\maxTemplate.max");
+                File.Copy(Directory.GetCurrentDirectory() + "\\Adder.exe", directorybase + "\\DEVS\\Adder.exe");
                 /******CHARACTER******/
                 Directory.CreateDirectory(directorybase + "\\CHR");
                 Directory.CreateDirectory(directorybase + "\\CHR\\SELPANEL");
