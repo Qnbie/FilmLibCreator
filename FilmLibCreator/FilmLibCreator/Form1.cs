@@ -99,9 +99,8 @@ namespace FilmLibCreator
                     //models
                     strTmp = directorybase + "\\MODELS" + "\\" + Props[i].ToUpper();
                     Directory.CreateDirectory(strTmp);
-                    Directory.CreateDirectory(strTmp + "\\MODEL");
-                    File.Copy(Directory.GetCurrentDirectory() + "\\maxTemplate.max", strTmp + $"\\MODEL\\{Props[i].ToUpper()}_MODEL_01.max");
-                    Directory.CreateDirectory(strTmp + "\\TEXT");
+                    File.Copy(Directory.GetCurrentDirectory() + "\\maxTemplate.max", strTmp + $"\\{Props[i].ToUpper()}_MODEL_01.max");
+                    Directory.CreateDirectory(strTmp + "\\MAPS");
                     Directory.CreateDirectory(strTmp + "\\MARI");
                 }
                 /******SCAN******/
