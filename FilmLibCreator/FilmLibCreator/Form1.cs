@@ -43,6 +43,8 @@ namespace FilmLibCreator
                 Directory.CreateDirectory(directorybase + "\\DEVS");
                 File.Copy(Directory.GetCurrentDirectory() + "\\maxTemplate.max", directorybase + "\\DEVS\\maxTemplate.max");
                 File.Copy(Directory.GetCurrentDirectory() + "\\Adder.exe", directorybase + "\\DEVS\\Adder.exe");
+                File.Copy(Directory.GetCurrentDirectory() + "\\WorkFlow.exe", directorybase + "\\DEVS\\WorkFlow.exe");
+
                 /******CHARACTER******/
                 Directory.CreateDirectory(directorybase + "\\CHR");
                 Directory.CreateDirectory(directorybase + "\\CHR\\SELPANEL");
